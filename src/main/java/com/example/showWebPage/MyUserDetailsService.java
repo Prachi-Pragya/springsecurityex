@@ -17,7 +17,7 @@ public class MyUserDetailsService implements UserDetailsService {
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
 		
-		Users user = repo.FindByUsername(username);
+		Users user = repo.findByUsername(username);
 		if(user == null)
 			throw new UsernameNotFoundException("user 404");
 		 
